@@ -1,0 +1,27 @@
+package controller;
+
+public class Leitura
+{
+	
+	private String caminho;
+	private String nome;
+	
+	public Leitura(String caminho, String nome) 
+	{
+		this.caminho = caminho;
+		this.nome = nome;
+	}
+	
+	public void VerificarData()
+	{
+		this.caminho = caminho;
+		this.nome = nome;
+		
+		try {
+			
+			
+		} catch (Exception e) {
+			System.err.println("Erro: " + e + " \nPossivel nome inválido, insira o dado novamente.");
+		}
+	}
+}

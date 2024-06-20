@@ -1,0 +1,12 @@
+package controller;
+
+public class LEITURA {
+	
+	private String caminho;
+	private String nome;
+	
+	public LEITURA(String caminho, String nome) {
+		this.caminho = caminho;
+		this.nome = nome;
+	}
+}

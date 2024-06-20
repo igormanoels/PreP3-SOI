@@ -1,0 +1,24 @@
+package controller;
+
+public class LEITURA throws JSONException
+{
+	
+	private String caminho;
+	private String nome;
+	
+	public LEITURA(String caminho, String nome) 
+	{
+		this.caminho = caminho;
+		this.nome = nome;
+	}
+	
+	public void VerificarData()
+	{
+		try {
+			
+			
+		} catch (Exception e) {
+			System.err.println("Erro: " + e + " \nPossivel nome inválido, insira o dado novamente.");
+		}
+	}
+}

@@ -1,0 +1,4 @@
+INDEX VERSION 1.134+C:\Users\FATEC ZONA LESTE\eclipse-workspace\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+3105739902.index
+4044757637.index

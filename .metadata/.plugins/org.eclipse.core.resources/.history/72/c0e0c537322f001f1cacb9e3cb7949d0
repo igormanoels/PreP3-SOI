@@ -1,0 +1,8 @@
+package controller;
+
+public class LEITURA {
+	private caminho
+	public LEITURA() {
+		// TODO Auto-generated constructor stub
+	}
+}

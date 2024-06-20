@@ -1,0 +1,29 @@
+package view;
+
+/*
+ * 1110482312054 - IGOR MANOEL DE SANTANA 
+ * Pre P3 - Pegar o conteudo do site: https://date.nager.at/api/v2/publicholidays/2020/US 
+ * (Usar modo RAW ou Dados Brutos), esse site traz um arquivo com diferentes feriados americanos. 
+ * Gravar em um arquivo chamado hol.json na pasta C:\TEMP (\tmp se for Linux) e fazer uma aplicacao java que, 
+ * na classe principal, no metodo Main peca ao usuario um name, chame uma classe de controle que leia o arquivo, e, 
+ * apresente a data do feriado. (Caso nao exista, lancar uma excecao)
+ * 
+ */
+public class Principal 
+{
+	public static void main(String[] args) 
+	{
+		System.out.println("Seja bem vindo a minha aplicação para avaliação da Pré-P3");
+		
+		String caminho = VerificaSO();
+	}
+
+	static String VerificaSO() 
+	{
+		String caminho;
+		
+		
+		return caminho;
+		
+	}
+}
