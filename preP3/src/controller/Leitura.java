@@ -1,48 +1,42 @@
 package controller;
 
 import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
+import java.io.FileReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 
-public class Leitura
-{
-	
-	public void VerificarData(String caminho, String data) throws IOException
-	{
-		String nomeArquivo = "hol.json";
-		try 
-		{
-			File arquivo = new File (caminho, data);
-			FileInputStream fluxo = new FileInputStream(caminho);
-			InputStreamReader leitor = new InputStreamReader(fluxo);
-			BufferedReader buffer = new BufferedReader(leitor);
-			
-			String linha = buffer.readLine();
-			
-			while ((linha = buffer.readLine()) != null) 
-			{
-	            String[] partes = linha.split(",");
+public class Leitura {
+    public void VerificarData(String caminho, String feriado) throws IOException 
+    {
+        try (BufferedReader reader = new BufferedReader(new FileReader(caminho))) 
+        {
+            String linha;
+            boolean encontrado = false;
 
-	            
-	            if (partes[2].equals(data))
-	            {
-	            	
-	                System.out.printf("%-20s %-30s %-20s %-20s\n", 
-	                		partes[0], partes[1], partes[2], partes[3]);
-	            }
-	        }	
-			
-			
-			buffer.close();
-			leitor.close();
-			fluxo.close();
-		} 
-		catch (Exception e) 
-		{
-			System.err.println("Erro: " + e + " \n");
-			throw new IOException("Possivel nome inválido, reinicie a aplicação e informe o dado novamente.");
-		}
-	}
+            while ((linha = reader.readLine()) != null) 
+            {
+                if (linha.contains(feriado)) 
+                {
+                    String[] partes = linha.split("\"date\":");
+                    if (partes.length > 1) 
+                    {
+                        String data = partes[1].split(",")[0].replace("\"", "").trim();
+                        System.out.printf("Feriado: %s, Data: %s\n", feriado, data );
+                        System.out.println("");
+                        encontrado = true;
+                        break;
+                    }
+                }
+            }
+
+            if (!encontrado) 
+            {
+                throw new IOException("Feriado não encontrado. Reinicie a aplicação e informe o dado novamente.");
+            }
+        } 
+        catch (IOException e) 
+        {
+            System.err.println("Erro: " + e.getMessage());
+            throw e;
+        }
+    }
 }
