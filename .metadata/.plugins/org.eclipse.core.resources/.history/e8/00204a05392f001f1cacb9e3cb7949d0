@@ -11,7 +11,7 @@ public class Leitura
 	
 	public void VerificarData(String caminho, String data) throws IOException
 	{
-		String nomeArquivo = "hol.json";
+		
 		try 
 		{
 			File arquivo = new File (caminho, data);
@@ -19,20 +19,9 @@ public class Leitura
 			InputStreamReader leitor = new InputStreamReader(fluxo);
 			BufferedReader buffer = new BufferedReader(leitor);
 			
-			String linha = buffer.readLine();
 			
-			while ((linha = buffer.readLine()) != null) 
-			{
-	            String[] partes = linha.split(",");
-
-	            
-	            if (partes[2].equals(data))
-	            {
-	            	
-	                System.out.printf("%-20s %-30s %-20s %-20s\n", 
-	                		partes[0], partes[1], partes[2], partes[3]);
-	            }
-	        }	
+			
+			
 			
 			
 			buffer.close();
@@ -41,8 +30,7 @@ public class Leitura
 		} 
 		catch (Exception e) 
 		{
-			System.err.println("Erro: " + e + " \n");
-			throw new IOException("Possivel nome inválido, reinicie a aplicação e informe o dado novamente.");
+			System.err.println("Erro: " + e + " \nPossivel nome inválido, insira o dado novamente.");
 		}
 	}
 }

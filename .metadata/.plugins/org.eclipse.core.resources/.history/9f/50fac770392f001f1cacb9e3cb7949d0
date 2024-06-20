@@ -11,7 +11,7 @@ public class Leitura
 	
 	public void VerificarData(String caminho, String data) throws IOException
 	{
-		String nomeArquivo = "hol.json";
+		
 		try 
 		{
 			File arquivo = new File (caminho, data);
@@ -23,14 +23,14 @@ public class Leitura
 			
 			while ((linha = buffer.readLine()) != null) 
 			{
-	            String[] partes = linha.split(",");
+	            String[] partes = linha.split(","); // Cria um vetor de string seperando por virgula conforme csv
 
 	            
-	            if (partes[2].equals(data))
+	            if (partes[2].equals(data)) // Compara o indice 2 do vetor de string criado
 	            {
 	            	
 	                System.out.printf("%-20s %-30s %-20s %-20s\n", 
-	                		partes[0], partes[1], partes[2], partes[3]);
+	                		partes[0], partes[1], partes[2], partes[3]); // printf separa os conteudos a partir do tamanho do campo para ficar bonitinho
 	            }
 	        }	
 			

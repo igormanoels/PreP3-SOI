@@ -1,0 +1,23 @@
+package controller;
+
+import java.io.File;
+import java.io.IOException;
+
+public class Leitura
+{
+	
+	public void VerificarData(String caminho, String data) throws IOException
+	{
+		
+		try 
+		{
+			File arquivo = new File (caminho, data);
+			FileInputStream fluxo = new FileInputStream(caminho);
+			InputStreamReader leitor = new InputStreamReader(fluxo);
+			BufferedReader buffer = new BufferedReader(leitor);
+		} catch (Exception e) 
+		{
+			System.err.println("Erro: " + e + " \nPossivel nome inválido, insira o dado novamente.");
+		}
+	}
+}

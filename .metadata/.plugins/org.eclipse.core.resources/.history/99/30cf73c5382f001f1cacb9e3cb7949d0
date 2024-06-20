@@ -1,0 +1,22 @@
+package controller;
+
+import java.io.IOException;
+
+public class Leitura
+{
+	
+	public void VerificarData(String caminho, String data) throws IOException
+
+	{
+		
+		try 
+		{
+			
+			
+			
+		} catch (Exception e) 
+		{
+			System.err.println("Erro: " + e + " \nPossivel nome inválido, insira o dado novamente.");
+		}
+	}
+}

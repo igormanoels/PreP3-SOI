@@ -11,7 +11,7 @@ public class Leitura
 	
 	public void VerificarData(String caminho, String data) throws IOException
 	{
-		String nomeArquivo = "hol.json";
+		
 		try 
 		{
 			File arquivo = new File (caminho, data);

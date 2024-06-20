@@ -5,7 +5,6 @@ import java.util.Scanner;
 
 import controller.Leitura;
 /*
- * Tarefa para ser entrege
  * 1110482312054 - IGOR MANOEL DE SANTANA 
  * Pre P3 - Pegar o conteudo do site: https://date.nager.at/api/v2/publicholidays/2020/US 
  * (Usar modo RAW ou Dados Brutos), esse site traz um arquivo com diferentes feriados americanos. 
